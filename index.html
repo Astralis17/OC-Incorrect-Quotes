@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Terminal in Browser</title>
+    <!-- Load PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #terminal {
+            width: 80%;
+            height: 80%;
+            background: #282c34;
+            color: #61dafb;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            text-align: center;
+            color: #282c34;
+        }
+        .output {
+            flex: 1;
+            overflow: auto;
+            margin-top: 20px;
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            font-family: monospace;
+        }
+        .input {
+            display: flex;
+        }
+        .input input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #61dafb;
+            border-radius: 4px;
+            outline: none;
+            margin-right: 10px;
+            color: #282c34;
+        }
+        .input button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background: #61dafb;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+        .input button:hover {
+            background: #21a1f1;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <h1>Python Terminal</h1>
+        <div class="output" id="output"></div>
+        <div class="input">
+            <input type="text" id="commandInput" placeholder="Enter Python code here...">
+            <button onclick="runCode()">Run</button>
+        </div>
+    </div>
+
+    <py-env>
+        - numpy
+    </py-env>
+
+    <script type="text/javascript">
+        function runCode() {
+            let code = document.getElementById("commandInput").value;
+            let outputDiv = document.getElementById("output");
+
+            // Clear previous output
+            outputDiv.innerHTML = '';
+
+            // Create a script element to run the code
+            let script = document.createElement('py-script');
+            script.innerHTML = code;
+
+            // Append the script to the output div
+            outputDiv.appendChild(script);
+        }
+    </script>
+</body>
+</html>
