@@ -54,7 +54,7 @@ Quotes= [
              [P1, ": It's too dangerous to go alone, take this!", "&", P2, ": ", P1, " you're just holding out your hand.", "&", P1, ": Yes."]],
         #Three Character Quotes
             [[P1, ": I swear, by the summer's end, thy will have taken thee to at least one party,", P2, "! 'tis my mission for this summer!", "&", P2, ": ...still bitter that they chose ", P3, " for the school play, are we?", "&", P1, ": Shut up- you and I both know that the only reason that, that thing got the lead role of Juliette is because she was blowing the drama teacher"],
-             [P1, ": Make no mistake. Not only am I party rocking, but I am also in the house tonight.", "&", P1, ": But are you shuffling?", P1, ": Everyday.", P3, ": What language are you two speaking??"]],
+             [P1, ": Make no mistake. Not only am I party rocking, but I am also in the house tonight.", "&", P1, ": But are you shuffling?", "&", P2, ": Everyday.", P3, ": What language are you two speaking??"]],
         #Four Character Quotes
             [],
         #Five Character Quotes
