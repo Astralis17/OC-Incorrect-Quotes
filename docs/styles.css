@@ -25,6 +25,7 @@ h1 {
 label {
     display: block;
     margin-top: 20px;
+    text-align: left;
 }
 
 input[type="number"], input[type="text"] {
@@ -37,13 +38,14 @@ input[type="number"], input[type="text"] {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 2000px 10px 20px;
     border: none;
     border-radius: 4px;
     background: #61dafb;
     color: white;
     cursor: pointer;
     margin-top: 10px;
+    margin-right: 2000px;
 }
 
 button:hover {

@@ -49,52 +49,31 @@ function generateConversation() {
         people.push(person);
     }
 
-    [P1, P2, P3, P4, P5, P6] = [null, null, null, null, null, null];
+    let [P1, P2, P3, P4, P5, P6] = [null, null, null, null, null, null];
     let availablePeople = [...people];
 
-    if (availablePeople.length > 0) {
-        P1 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
-    if (availablePeople.length > 0) {
-        P2 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
-    if (availablePeople.length > 0) {
-        P3 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
-    if (availablePeople.length > 0) {
-        P4 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
-    if (availablePeople.length > 0) {
-        P5 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
-    if (availablePeople.length > 0) {
-        P6 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
-    }
+    if (availablePeople.length > 0) P1 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
+    if (availablePeople.length > 0) P2 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
+    if (availablePeople.length > 0) P3 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
+    if (availablePeople.length > 0) P4 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
+    if (availablePeople.length > 0) P5 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
+    if (availablePeople.length > 0) P6 = availablePeople.splice(Math.floor(Math.random() * availablePeople.length), 1)[0];
 
+    const characters = [P1, P2, P3, P4, P5, P6];
     const quoteList = Quotes[count - 1];
     const randomQuote = quoteList[Math.floor(Math.random() * quoteList.length)];
     const outputDiv = document.getElementById("output");
 
     let conversation = "";
     for (let i = 0; i < randomQuote.length; i++) {
-        if (randomQuote[i].includes("P1")) {
-            conversation += `${P1}: `;
-        } else if (randomQuote[i].includes("P2")) {
-            conversation += `${P2}: `;
-        } else if (randomQuote[i].includes("P3")) {
-            conversation += `${P3}: `;
-        } else if (randomQuote[i].includes("P4")) {
-            conversation += `${P4}: `;
-        } else if (randomQuote[i].includes("P5")) {
-            conversation += `${P5}: `;
-        } else if (randomQuote[i].includes("P6")) {
-            conversation += `${P6}: `;
-        } else {
+        if (typeof randomQuote[i] === 'string') {
             conversation += randomQuote[i];
+        } else {
+            conversation += `${characters[pGroup.indexOf(randomQuote[i])]}: `;
         }
         conversation += " ";
     }
 
-    outputDiv.innerHTML = conversation;
+    outputDiv.innerHTML = conversation.trim();
     outputDiv.style.display = "block";
 }
