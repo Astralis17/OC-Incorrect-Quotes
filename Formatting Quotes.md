@@ -65,4 +65,19 @@ P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want
 
 ##### Finally put square brackets [] around all of it and put a comma after it
 
-[P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want to.", "&", P1, ": No, no I don't."]
+[P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want to.", "&", P1, ": No, no I don't."],
+
+
+If a name shows up in the middle of a sentence, for example, 
+
+Person 1: I get your point. But gods beyond, Person 2, has anyone ever told you that you're just really mean?
+
+Formatting using the above guide gives us this 
+
+[P1, ": I get your point. But gods beyond, P2, has anyone ever told you that you're just really mean."]
+
+P2 is in quotes meaning it won't get replaced so end the quotation marks (with appropriate spacing), put a comma, then do P2, another comma and then start the quotation marks
+
+[P1, ": I get your point. But gods beyond, ", P2, " has anyone ever told you that you're just really mean."]
+
+Remember to put a space before the next words when including a name
