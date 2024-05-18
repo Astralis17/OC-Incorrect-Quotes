@@ -65,4 +65,4 @@ P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want
 
 ##### Finally put square brackets [] around all of it and put a comma after it
 
-`[P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want to.", "&", P1, ": No, no I don't."]`
+[P1, ": I couldn't help you even if I wanted to.", "&", P2, ": But you don't want to.", "&", P1, ": No, no I don't."]
